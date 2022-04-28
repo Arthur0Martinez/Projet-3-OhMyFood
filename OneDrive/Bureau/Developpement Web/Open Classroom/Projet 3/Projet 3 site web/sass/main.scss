@@ -1,0 +1,276 @@
+/* Tete de page général commune à tous les sites */
+
+* {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+  }
+
+header {
+    .barrehead {
+        display: flex;
+        align-items: center;
+        i {
+            margin: 0 70px 0 25px;
+        }
+    }
+    .titre {
+        box-shadow: 0px 10px 10px 14x rgba(0, 0, 0, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0px;
+
+        img {
+            margin: 0px;
+            padding : 0;
+            width : 200px;
+        }
+    }
+}
+
+
+
+.lieu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.211);
+    padding: 0px;
+    i {
+        padding-right: 20px;
+    }
+    p {
+        font-weight: 600;
+    }
+}
+
+.reserve {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 70px 20px;
+    background-color: rgba(128, 128, 128, 0.055);
+    h2, p {
+        text-align: center;
+        margin: 5px auto;
+    }
+    button {
+        color: white;
+        background-color: #9256dcce;
+        margin-top: 20px;
+        padding: 18px 20px;
+        border-radius: 30px;
+    }
+}
+
+/* Navigation du premier site */
+nav {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    h2 {
+        padding-left: 15px;
+    }
+    ol {
+        padding: 5px 30px;
+        padding-left: 18px;
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            border-radius: 20px;                
+            box-shadow: 0px 3px 15px 5px rgba(177, 165, 165, 0.256);
+            width: 90%;
+            max-width: 500px;
+            margin: 25px 0px;
+            background-color: rgba(128, 128, 128, 0.055);
+            padding-left: 15px;
+            strong {
+                display: flex;
+                justify-content: center;
+                color: white;
+                background-color: blue;
+                padding: 5px 5px;
+                border-radius: 50%;
+                font-size: 12px;
+                height: 14px;
+                width: 14px;
+                margin-left: -25px;
+
+            }
+            div {
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                i {
+                    padding-right: 20px;
+                    padding-left: 0px;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+/* Main du premier site */
+.pageacc {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(211, 211, 211, 0.671);
+    width: 100%;
+    h2 {
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    strong {
+        padding-top: 5px;
+    }
+    strong, p {
+        color: black;
+        margin: 5px;
+    }
+    .Restau {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin: 10px 15px;
+        width: 92%;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 15px;
+        display: inline-block;
+        text-decoration: none;
+        
+        img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
+
+        .paragraphe {
+            display: flex;
+        
+            .text {
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                z-index: 1;
+                padding: 0px 10px;
+            }
+            i {
+                padding: 20px 30px 5px 5px;
+                color: black;
+                font-size: 23px;
+                font-weight: 100;
+            }
+        }
+    }
+    .pad {
+        margin-bottom: 50px;
+    }
+}
+footer {
+    color: white;
+    background-color: rgb(60, 55, 55);
+    padding: 20px 0 2px 30px;
+    margin: 0;
+    padding-bottom: 20px;
+    img {
+        filter: invert(100%);
+        width: 30%;
+        max-width: 200px;
+        padding-bottom: 20px;
+    }
+    p {
+        margin: 8px 0;
+    }
+    .Proposer, .Devenir {
+        display: flex;
+        align-items: center;
+        height: auto;
+        i {
+            padding-right: 10px ;
+            font-size: 13px;
+        }
+    }
+}
+
+/* Page des menus */
+
+header {
+    .imageresto {
+        overflow: hidden;
+        height: 270px;
+        img {
+            object-fit: cover;
+            width: 110%;
+        }
+    }
+}
+
+.pagemenu {
+    background-color: whitesmoke;
+    border-radius: 25px;
+    .nomresto {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 30px;
+        border-radius: 25px;
+    }
+}
+article {
+    padding-left: 20px;
+    .souligne {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            margin: 0;
+            font-weight: 100;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        .trait {
+            width: 60px;
+            height: 3px;
+            background-color: rgba(111, 117, 106, 0.308);
+        }
+    }
+}
+.command {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: #9256dcce;
+        margin: 20px auto 50px auto;
+        padding: 0px 30px;
+        border-radius: 30px;
+        p {
+            margin: 15px;
+        }
+}
+.plat {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;                
+    box-shadow: 0px 3px 15px 5px rgba(177, 165, 165, 0.256);
+    width: 90%;
+    margin: 25px 0px;
+    background-color: rgba(128, 128, 128, 0.055);
+    padding-left: 15px;
+    .platL {
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0;
+        strong, p {
+            margin: 3px 0;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+}

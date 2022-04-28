@@ -1,0 +1,403 @@
+@charset "UTF-8";
+/* Tete de page général commune à tous les sites */
+* {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+header .barrehead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .barrehead i {
+  margin: 0 70px 0 25px;
+}
+
+header .titre {
+  -webkit-box-shadow: 0px 10px 10px 14x rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 10px 10px 14x rgba(0, 0, 0, 0.15);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px 0px;
+}
+
+header .titre img {
+  margin: 0px;
+  padding: 0;
+  width: 200px;
+}
+
+.lieu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(128, 128, 128, 0.211);
+  padding: 0px;
+}
+
+.lieu i {
+  padding-right: 20px;
+}
+
+.lieu p {
+  font-weight: 600;
+}
+
+.reserve {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 20px 70px 20px;
+  background-color: rgba(128, 128, 128, 0.055);
+}
+
+.reserve h2, .reserve p {
+  text-align: center;
+  margin: 5px auto;
+}
+
+.reserve button {
+  color: white;
+  background-color: #9256dcce;
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-radius: 30px;
+}
+
+/* Navigation du premier site */
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav h2 {
+  padding-left: 15px;
+}
+
+nav ol {
+  padding: 5px 30px;
+  padding-left: 18px;
+}
+
+nav ol li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 3px 15px 5px rgba(177, 165, 165, 0.256);
+          box-shadow: 0px 3px 15px 5px rgba(177, 165, 165, 0.256);
+  width: 90%;
+  max-width: 500px;
+  margin: 25px 0px;
+  background-color: rgba(128, 128, 128, 0.055);
+  padding-left: 15px;
+}
+
+nav ol li strong {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  background-color: blue;
+  padding: 5px 5px;
+  border-radius: 50%;
+  font-size: 12px;
+  height: 14px;
+  width: 14px;
+  margin-left: -25px;
+}
+
+nav ol li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+nav ol li div i {
+  padding-right: 20px;
+  padding-left: 0px;
+}
+
+nav ol li div p {
+  margin: 0;
+}
+
+/* Main du premier site */
+.pageacc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(211, 211, 211, 0.671);
+  width: 100%;
+}
+
+.pageacc h2 {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.pageacc strong {
+  padding-top: 5px;
+}
+
+.pageacc strong, .pageacc p {
+  color: black;
+  margin: 5px;
+}
+
+.pageacc .Restau {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  margin: 10px 15px;
+  width: 92%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 15px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.pageacc .Restau img {
+  width: 100%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pageacc .Restau .paragraphe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pageacc .Restau .paragraphe .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+  padding: 0px 10px;
+}
+
+.pageacc .Restau .paragraphe i {
+  padding: 20px 30px 5px 5px;
+  color: black;
+  font-size: 23px;
+  font-weight: 100;
+}
+
+.pageacc .pad {
+  margin-bottom: 50px;
+}
+
+footer {
+  color: white;
+  background-color: #3c3737;
+  padding: 20px 0 2px 30px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+footer img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: 30%;
+  max-width: 200px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+footer .Proposer, footer .Devenir {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+}
+
+footer .Proposer i, footer .Devenir i {
+  padding-right: 10px;
+  font-size: 13px;
+}
+
+/* Page des menus */
+header .imageresto {
+  overflow: hidden;
+  height: 270px;
+}
+
+header .imageresto img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 110%;
+}
+
+.pagemenu {
+  background-color: whitesmoke;
+  border-radius: 25px;
+}
+
+.pagemenu .nomresto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 30px;
+  border-radius: 25px;
+}
+
+article {
+  padding-left: 20px;
+}
+
+article .souligne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+article .souligne h3 {
+  margin: 0;
+  font-weight: 100;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+article .souligne .trait {
+  width: 60px;
+  height: 3px;
+  background-color: rgba(111, 117, 106, 0.308);
+}
+
+.command {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  background-color: #9256dcce;
+  margin: 20px auto 50px auto;
+  padding: 0px 30px;
+  border-radius: 30px;
+}
+
+.command p {
+  margin: 15px;
+}
+
+.plat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 3px 15px 5px rgba(177, 165, 165, 0.256);
+          box-shadow: 0px 3px 15px 5px rgba(177, 165, 165, 0.256);
+  width: 90%;
+  margin: 25px 0px;
+  background-color: rgba(128, 128, 128, 0.055);
+  padding-left: 15px;
+}
+
+.plat .platL {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5px 0;
+}
+
+.plat .platL strong, .plat .platL p {
+  margin: 3px 0;
+}
+
+.plat .platL p {
+  font-size: 15px;
+}
+/*# sourceMappingURL=main.css.map */
