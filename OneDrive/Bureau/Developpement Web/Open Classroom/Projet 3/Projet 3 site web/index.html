@@ -10,122 +10,159 @@
     <script src="https://kit.fontawesome.com/fe777b03ca.js" crossorigin="anonymous"></script>
     
 </head>
+
 <body>
+    <div class="loaderconfig">
+        <div class="loaderconfig__loader loaderconfig__quart"></div>
+    </div>
+
     <header>
         <div class="titre">
-            <img src="assets/images/logo/ohmyfood.png" alt="Logo du site">
+            <h1 class="titre__texte">ohmyfood</h1>
         </div>
 
-        <div class="lieu">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Paris, Belleville</p>
+        <div class="location">
+            <i class="symbole fa-solid fa-location-dot"></i>
+            <p class="location__texte">Paris, Belleville</p>
         </div>
 
         <div class="reserve">
-            <h2>Réserver le contenu qui vous convient</h2>
-            <p>Découvrer des restaurants d'exception, séléctionnés par nos soins</p>
-            <button>Explorer nos restaurants</button>
+            <div class="reserve__texte">
+                <h2 class="reserve__texte--titre">Réserver le menu qui vous convient</h2>
+                <p class="reserve__texte--soustitre">Découvrer des restaurants d'exception, séléctionnés par nos soins.</p>
+            </div>
+            <button class="reserve__button">Explorer nos restaurants</button>
         </div>
     </header>
     
-    <nav>
-        <h2>Fonctionnement</h2>
-        <ol>
-            <li>
-                <strong>1</strong>
-                <div>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <p>Choisissez un restaurant</p>
-                </div>
-            </li>
-            <li>
-                <strong>2</strong>
-                <div>
-                    <i class="fa-solid fa-list"></i>
-                    <p>Composez votre menu</p>
-                </div>
-            </li>
-            <li>
-                <strong>3</strong>
-                <div>
-                    <i class="fa-solid fa-store"></i>
-                    <p>Dégustez au restaurant</p>
-                </div>
-            </li>
-        </ol>
-    </nav>
+    <main>
+        <section class="fonctionnement">
 
-    <main class="pageacc">
+            <div class="container">
+                <h2 class="fonctionnement__titre">Fonctionnement</h2>
 
-        <h2>Restaurants</h2>
+                <ol class="fonctionnement__liste">
+                    <li class="fonctionnement__element">
+                        <strong class="fonctionnement__chiffre">1</strong>
+                        <div class="fonctionnement__texte">
+                            <i class="symbole fa-solid fa-mobile-screen-button"></i>
+                            <p>Choisissez un restaurant</p>
+                        </div>
+                    </li>
 
-        <div class="Restau 1er" >
-            <a href="indexResto1.html">
-                <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                <div class="paragraphe">
-                    <div class="text">
-                        <strong>La palette du goût</strong>
-                        <p>Ménilmontant</p>
+                    <li class="fonctionnement__element">
+                        <strong class="fonctionnement__chiffre">2</strong>
+                        <div class="fonctionnement__texte">
+                            <i class="symbole fa-solid fa-list"></i>
+                            <p>Composez votre menu</p>
+                        </div>
+                    </li>
+
+                    <li class="fonctionnement__element">
+                        <strong class="fonctionnement__chiffre">3</strong>
+                        <div class="fonctionnement__texte">
+                            <i class="symbole fa-solid fa-store"></i>
+                            <p>Dégustez au restaurant</p>
+                        </div>
+                    </li>
+                </ol>
+
+            </div>
+
+        <section>
+
+        <nav class="restaunav">
+
+            <h2 class="restaunav__titre">Restaurants</h2>
+
+            <div class="restaucard" >
+                <a href="indexResto1.html">
+                    <img class="restaucard__image" src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
+                    <div class="restaucard__paragraphe">
+                        <div class="restaucard__texte">
+                            <strong class="restaucard__texte--gras">La palette du goût</strong>
+                            <p class="restaucard__texte--normal">Ménilmontant</p>
+                        </div>
+                        <div class="restaucard__coeurvide">
+                            <i class="fa-regular fa-heart"></i>
+                            <div class="restaucard__coeurplein">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>                 
                     </div>
-                        <i class="fa-regular fa-heart"></i>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
 
-        <div class="Restau 2eme">
-            <a href="indexResto2.html">
-                <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
-                <div class="paragraphe">
-                    <div class="text">
-                        <strong>La note enchantée</strong>
-                        <p>Charonne</p>
+            <div class="restaucard">
+                <a href="indexResto2.html">
+                    <img class="restaucard__image" src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La note enchantée">
+                    <div class="restaucard__paragraphe">
+                        <div class="restaucard__texte">
+                            <strong class="restaucard__texte--gras">La note enchantée</strong>
+                            <p class="restaucard__texte--normal">Charonne</p>
+                        </div>
+                        <div class="restaucard__coeurvide">
+                            <i class="fa-regular fa-heart"></i>
+                            <div class="restaucard__coeurplein">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>             
                     </div>
-                        <i class="fa-regular fa-heart"></i>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
 
-        <div class="Restau 3eme">
-            <a href="indexResto3.html">
-                <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
-                <div class="paragraphe">
-                    <div class="text">
-                        <strong>A la française</strong>
-                        <p>Cité Rouge</p>
+            <div class="restaucard">
+                <a href="indexResto3.html">
+                    <img class="restaucard__image" src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la française">
+                    <div class="restaucard__paragraphe">
+                        <div class="restaucard__texte">
+                            <strong class="restaucard__texte--gras">A la française</strong>
+                            <p class="restaucard__texte--normal">Cité Rouge</p>
+                        </div>
+                        <div class="restaucard__coeurvide">
+                            <i class="fa-regular fa-heart"></i>
+                            <div class="restaucard__coeurplein">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
                     </div>
-                        <i class="fa-regular fa-heart"></i>
-                </div>
-            </a>
-        </div>
+                </a>
+            </div>
 
-        <div class="Restau pad">
-            <a href="indexResto4.html">
-                <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
-                <div class="paragraphe">
-                    <div class="text">
-                        <strong>Le délice des sens</strong>
-                        <p>Folie-Méricourt</p>
+            <div class="restaucard">
+                <a href="indexResto4.html">
+                    <img class="restaucard__image" src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+                    <div class="restaucard__paragraphe">
+                        <div class="restaucard__texte">
+                            <strong class="restaucard__texte--gras">Le délice des sens</strong>
+                            <p class="restaucard__texte--normal">Folie-Méricourt</p>
+                        </div>
+                        <div class="restaucard__coeurvide">
+                            <i class="fa-regular fa-heart"></i>
+                            <div class="restaucard__coeurplein">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>  
                     </div>
-                        <i class="fa-regular fa-heart"></i>
-                </div>
-            </a>
-        </div>
-
+                </a>
+            </div>
+        </nav>
     </main>
 
-    <Footer>
-        <img src="assets/images/logo/ohmyfood@2x.svg" alt="">
-        <div class="PiedPage">
-            <div class="Proposer">
-                <i class="fa-solid fa-utensils"></i>
+    <Footer class="piedpage">
+        <h3 class="piedpage__titre">ohmyfood</h3>
+        <nav class="piedpage__nav">
+            <div class="piedpage__symbtxt">
+                <i class= "piedpage__symbtxt--symbole fa-solid fa-utensils"></i>
                 <p>Proposer un restaurant</p>
             </div>
-            <div class="Devenir">
-                <i class="fa-solid fa-handshake-angle"></i>
+            <div class="piedpage__symbtxt">
+                <i class= "piedpage__symbtxt--symbole fa-solid fa-handshake-angle"></i>
                 <p>Devenir partenaire</p>
             </div>
             <p>Mentions légales</p>
             <p>Contact</p>
+        </nav>
     </Footer>
 </body>
 </html>

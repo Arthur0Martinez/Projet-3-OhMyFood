@@ -1,24 +1,132 @@
 @charset "UTF-8";
-/* Tete de page général commune à tous les sites */
-* {
-  font-family: 'Roboto', sans-serif;
-  text-decoration: none;
-}
-
-header .barrehead {
+/*Variables*/
+/*Règles répétables*/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.symbole {
+  padding-right: 20px;
+}
+
+/*Loader*/
+.loaderconfig {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  background-color: #fffffff4;
+  height: 100%;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: hideAnimation 0s linear 0.1s;
+          animation: hideAnimation 0s linear 0.1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-header .barrehead i {
-  margin: 0 70px 0 25px;
+.loaderconfig__loader {
+  width: 130px;
+  height: 130px;
+  display: inline-block;
+  position: relative;
 }
 
-header .titre {
+.loaderconfig__quart {
+  border-radius: 100px;
+  border: 6px solid transparent;
+  border-top-color: #9256dc;
+  -webkit-animation: spin 2.5s ease-out infinite;
+          animation: spin 2.5s ease-out infinite;
+}
+
+.loaderconfig__quart::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  border-radius: 100px;
+  border: 6px solid transparent;
+  border-top-color: #ff79d9;
+  -webkit-animation: spin 2.5s ease-in infinite;
+          animation: spin 2.5s ease-in infinite;
+}
+
+.loaderconfig__quart::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 100px;
+  border: 6px solid transparent;
+  border-top-color: #99e2d0;
+  -webkit-animation: spin 2.5s ease-out infinite;
+          animation: spin 2.5s ease-out infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
+/* Tete de page général commune à tous les sites */
+* {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  border-style: none;
+}
+
+.titre {
   -webkit-box-shadow: 0px 10px 10px 14x rgba(0, 0, 0, 0.15);
           box-shadow: 0px 10px 10px 14x rgba(0, 0, 0, 0.15);
   display: -webkit-box;
@@ -31,15 +139,24 @@ header .titre {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 15px 0px;
+  /*Sur les pages des menus*/
 }
 
-header .titre img {
-  margin: 0px;
-  padding: 0;
+.titre__texte {
+  font-family: "Shrikhand", cursive;
   width: 200px;
+  margin: 0 50px;
+  padding: 0;
 }
 
-.lieu {
+.titre__fleche {
+  color: black;
+  font-size: 21px;
+  margin-left: -10px;
+}
+
+/*Sur la page principal*/
+.location {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,11 +170,7 @@ header .titre img {
   padding: 0px;
 }
 
-.lieu i {
-  padding-right: 20px;
-}
-
-.lieu p {
+.location__texte {
   font-weight: 600;
 }
 
@@ -76,41 +189,40 @@ header .titre img {
   background-color: rgba(128, 128, 128, 0.055);
 }
 
-.reserve h2, .reserve p {
+.reserve__texte {
   text-align: center;
   margin: 5px auto;
 }
 
-.reserve button {
+.reserve__texte--titre {
+  margin: 0 20px;
+}
+
+.reserve__button {
   color: white;
-  background-color: #9256dcce;
+  background-color: #9356DC;
   margin-top: 20px;
   padding: 18px 20px;
   border-radius: 30px;
+  -webkit-box-shadow: 0px 6px 10px 2px rgba(28, 28, 28, 0.229);
+          box-shadow: 0px 6px 10px 2px rgba(28, 28, 28, 0.229);
 }
 
-/* Navigation du premier site */
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 10px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+/* Navigation de la page principal */
+.fonctionnement {
+  color: black;
 }
 
-nav h2 {
+.fonctionnement__titre {
   padding-left: 15px;
 }
 
-nav ol {
+.fonctionnement__liste {
   padding: 5px 30px;
   padding-left: 18px;
 }
 
-nav ol li {
+.fonctionnement__element {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,7 +242,7 @@ nav ol li {
   padding-left: 15px;
 }
 
-nav ol li strong {
+.fonctionnement__chiffre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,27 +259,18 @@ nav ol li strong {
   margin-left: -25px;
 }
 
-nav ol li div {
+.fonctionnement__texte {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px;
-}
-
-nav ol li div i {
-  padding-right: 20px;
-  padding-left: 0px;
-}
-
-nav ol li div p {
-  margin: 0;
+  padding: 5px 20px;
 }
 
 /* Main du premier site */
-.pageacc {
+.restaunav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,21 +282,12 @@ nav ol li div p {
   width: 100%;
 }
 
-.pageacc h2 {
+.restaunav__titre {
   padding-top: 20px;
   padding-left: 20px;
 }
 
-.pageacc strong {
-  padding-top: 5px;
-}
-
-.pageacc strong, .pageacc p {
-  color: black;
-  margin: 5px;
-}
-
-.pageacc .Restau {
+.restaucard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,20 +305,20 @@ nav ol li div p {
   text-decoration: none;
 }
 
-.pageacc .Restau img {
+.restaucard__image {
   width: 100%;
   height: 70%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.pageacc .Restau .paragraphe {
+.restaucard__paragraphe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.pageacc .Restau .paragraphe .text {
+.restaucard__texte {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,54 +328,99 @@ nav ol li div p {
           flex-direction: column;
   background-color: white;
   width: 100%;
-  z-index: 1;
   padding: 0px 10px;
+  color: black;
 }
 
-.pageacc .Restau .paragraphe i {
+.restaucard__texte--gras {
+  padding-top: 5px;
+  margin: 5px;
+}
+
+.restaucard__texte--normal {
+  margin: 5px;
+}
+
+.restaucard__coeurvide {
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 20px 30px 5px 5px;
   color: black;
   font-size: 23px;
   font-weight: 100;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: -webkit-transform 350ms ease-in-out;
+  transition: -webkit-transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out;
+  transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
 }
 
-.pageacc .pad {
-  margin-bottom: 50px;
+.restaucard__coeurvide i {
+  -webkit-transition: color 250ms;
+  transition: color 250ms;
 }
 
-footer {
+.restaucard__coeurvide:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  color: blue;
+}
+
+.restaucard__coeurvide:hover .restaucard__coeurplein {
+  opacity: 1;
+}
+
+.restaucard__coeurplein {
+  position: absolute;
+  display: inline-block;
+  color: blue;
+  font-size: 23px;
+  font-weight: 100;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+}
+
+.piedpage {
   color: white;
   background-color: #3c3737;
-  padding: 20px 0 2px 30px;
+  padding: 20px 0 2px 20px;
   margin: 0;
   padding-bottom: 20px;
 }
 
-footer img {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
-  width: 30%;
-  max-width: 200px;
-  padding-bottom: 20px;
+.piedpage__titre {
+  font-family: "Shrikhand", cursive;
+  font-size: 20px;
 }
 
-footer p {
-  margin: 8px 0;
+.piedpage__nav p {
+  margin: 7px 0;
 }
 
-footer .Proposer, footer .Devenir {
+.piedpage__symbtxt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: auto;
 }
 
-footer .Proposer i, footer .Devenir i {
+.piedpage__symbtxt--symbole {
   padding-right: 10px;
-  font-size: 13px;
+  font-size: 12px;
+}
+
+.piedpage__symbtxt p {
+  margin: 5px 0;
 }
 
 /* Page des menus */
@@ -297,7 +436,6 @@ header .imageresto img {
 }
 
 .pagemenu {
-  background-color: whitesmoke;
   border-radius: 25px;
 }
 
@@ -313,6 +451,10 @@ header .imageresto img {
           justify-content: space-between;
   margin: 0 30px;
   border-radius: 25px;
+}
+
+.pagemenu .nomresto h2 {
+  font-family: "Shrikhand", cursive;
 }
 
 article {
@@ -363,6 +505,15 @@ article .souligne .trait {
   margin: 15px;
 }
 
+.entrées, .plats, .desserts {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .plat {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,9 +531,10 @@ article .souligne .trait {
   margin: 25px 0px;
   background-color: rgba(128, 128, 128, 0.055);
   padding-left: 15px;
+  font-size: 15px;
 }
 
-.plat .platL {
+.platL {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,13 +543,21 @@ article .souligne .trait {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 5px 0;
+  width: 80%;
 }
 
-.plat .platL strong, .plat .platL p {
+.platL strong, .platL p {
   margin: 3px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.plat .platL p {
+.platL p {
   font-size: 15px;
+}
+
+.prix {
+  margin: 15px 15px 0 0;
 }
 /*# sourceMappingURL=main.css.map */

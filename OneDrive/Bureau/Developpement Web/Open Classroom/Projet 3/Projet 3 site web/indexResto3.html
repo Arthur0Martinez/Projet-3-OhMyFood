@@ -10,12 +10,12 @@
     <script src="https://kit.fontawesome.com/fe777b03ca.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div class="barrehead">
-            <i class="fa-solid fa-arrow-left"></i>
-            <div class="titre">
-                <img src="assets/images/logo/ohmyfood.png" alt="Logo du site">
-            </div>
+    <header>         
+        <div class="titre">
+            <a class="titre__fleche" href="index.html">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+            <h1 class="titre__texte">ohmyfood</h1>
         </div>
         <div class="imageresto">
             <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant">
@@ -28,68 +28,95 @@
             <i class="fa-regular fa-heart"></i>
         </div>
         <article>
-            <h3>Entrées</h3>
+            <div class="souligne">
+                <h3>Entrées</h3>
+                <div class="trait"></div>
+            </div>
             <div class="entrées">
 
                 <div class="plat">
-                    <strong>Tartare de poulpe acidulé</strong>
-                    <p>Aux zestes d'orange</p>
+                    <div class="platL">
+                        <strong>Tartare de poulpe acidulé</strong>
+                        <p>Aux zestes d'orange</p>
+                    </div>
                     <p>25€</p>
                 </div>
 
                 <div class="plat">
-                    <strong>Velouté de légumes d'antan</strong>
-                    <p>Carotte, panais, topinambour</p>
+                    <div class="platL">
+                        <strong>Velouté de légumes d'antan</strong>
+                        <p>Carotte, panais, topinambour</p>
+                    </div>
                     <p>35€</p>
                 </div>
 
                 <div class="plat">
-                    <strong>Soupe à l'oignon</strong>
-                    <p>Revisitée</p>
+                    <div class="platL">
+                        <strong>Soupe à l'oignon</strong>
+                        <p>Revisitée</p>
+                    </div>
                     <p>20€</p>
                 </div>
             </div>
             
-            <h3>Plats</h3>
+            <div class="souligne">
+                <h3>Plats</h3>
+                <div class="trait"></div>
+            </div>
             <div class="plats">
 
                 <div class="plat">
-                    <strong>Coquille Saint-Jacques</strong>
-                    <p>Accompagnées d'une purée de panais</p>
+                    <div class="platL">
+                        <strong>Coquille Saint-Jacques</strong>
+                        <p>Accompagnées d'une purée de panais</p>
+                    </div>
                     <p>40€</p>
                 </div>
 
                 <div class="plat">
-                    <strong>Magret de canard</strong>
-                    <p>Et parmentier de pomme de terres</p>
+                    <div class="platL">
+                        <strong>Magret de canard</strong>
+                        <p>Et parmentier de pomme de terres</p>
+                    </div>
                     <p>35€</p>
                 </div>
 
                 <div class="plat">
-                    <strong>Pigeonneau d'Ille-et-Vilaine</strong>
-                    <p>Sur son lit de gnocchis aux légumes</p>
+                    <div class="platL">
+                        <strong>Pigeonneau d'Ille-et-Vilaine</strong>
+                        <p>Sur son lit de gnocchis aux légumes</p>
+                    </div>
                     <p>44€</p>
                 </div>
             </div>
 
-            <h3>Desserts</h3>
+            <div class="souligne">
+                <h3>Desserts</h3>
+                <div class="trait"></div>
+            </div>
             <div class="desserts">
 
                 <div class="plat">
-                    <strong>Pétales de violettes glacés</strong>
-                    <p>Et purée de noisettes</p>
+                    <div class="platL">
+                        <strong>Pétales de violettes glacés</strong>
+                        <p>Et purée de noisettes</p>
+                    </div>
                     <p>18€</p>
                 </div>
 
                 <div class="plat">
-                    <strong>Fondant au chocolat</strong>
-                    <p>Revisité</p>
+                    <div class="platL">
+                        <strong>Fondant au chocolat</strong>
+                        <p>Revisité</p>
+                    </div>
                     <p>22€</p>
                 </div>
 
                 <div class="plat">
-                    <strong>Millefeuille croustillant</strong>
-                    <p>Myrtilles et pâte d'amande</p>
+                    <div class="platL">
+                        <strong>Millefeuille croustillant</strong>
+                        <p>Myrtilles et pâte d'amande</p>
+                    </div>
                     <p>23€</p>
                 </div>
             </div>
@@ -102,19 +129,20 @@
         
     </main>
 
-    <Footer>
-        <img src="assets/images/logo/ohmyfood@2x.svg" alt="">
-        <div class="PiedPage">
-            <div class="Proposer">
-                <i class="fa-solid fa-utensils"></i>
+    <Footer class="piedpage">
+        <h3 class="piedpage__titre">ohmyfood</h3>
+        <nav class="piedpage__nav">
+            <div class="piedpage__symbtxt">
+                <i class= "piedpage__symbtxt--symbole fa-solid fa-utensils"></i>
                 <p>Proposer un restaurant</p>
             </div>
-            <div class="Devenir">
-                <i class="fa-solid fa-handshake-angle"></i>
+            <div class="piedpage__symbtxt">
+                <i class= "piedpage__symbtxt--symbole fa-solid fa-handshake-angle"></i>
                 <p>Devenir partenaire</p>
             </div>
             <p>Mentions légales</p>
             <p>Contact</p>
+        </nav>
     </Footer>
     
 </body>

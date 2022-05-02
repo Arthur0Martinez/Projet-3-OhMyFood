@@ -1,45 +1,132 @@
-/* Tete de page général commune à tous les sites */
+/*Variables*/
 
-* {
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-  }
+$Policesite: 'Roboto', sans-serif;
+$Policestitre: 'Shrikhand', cursive;
+$blanc : white;
+$couleurprimaire : #9356DC;
 
-header {
-    .barrehead {
-        display: flex;
-        align-items: center;
-        i {
-            margin: 0 70px 0 25px;
+
+/*Règles répétables*/
+
+.container {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.symbole {
+    padding-right: 20px
+}
+
+/*Loader*/
+
+.loaderconfig {
+    display: flex;
+    position: fixed; 	
+    background-color: #fffffff4;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    animation: hideAnimation 0s linear 0.1s;
+    animation-fill-mode: forwards;
+
+    &__loader {
+        width: 130px;
+        height: 130px;
+        display: inline-block;
+        position: relative;
+    }
+
+    &__quart {
+        border-radius: 100px;
+        border: 6px solid transparent;
+        border-top-color: #9256dc;
+        animation:spin 2.5s ease-out infinite;
+        ;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            bottom: 5px;
+            right: 5px;
+            border-radius: 100px;
+            border: 6px solid transparent;
+            border-top-color: #ff79d9;
+            animation:spin 2.5s ease-in infinite;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            bottom: 15px;
+            right: 15px;
+            border-radius: 100px;
+            border: 6px solid transparent;
+            border-top-color: #99e2d0;
+            animation:spin 2.5s ease-out infinite;
         }
     }
-    .titre {
-        box-shadow: 0px 10px 10px 14x rgba(0, 0, 0, 0.15);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 15px 0px;
+}
+@keyframes spin {
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
+@keyframes hideAnimation {
+    to {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+  }
 
-        img {
-            margin: 0px;
-            padding : 0;
-            width : 200px;
-        }
+/* Tete de page général commune à tous les sites */
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+* {
+    font-family: $Policesite;
+    text-decoration: none;
+    border-style: none;
+
+  }
+
+.titre {
+    box-shadow: 0px 10px 10px 14x rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0px;
+
+    &__texte {
+        font-family: $Policestitre;
+        width: 200px;
+        margin: 0 50px;
+        padding: 0;
+    }
+
+/*Sur les pages des menus*/
+    &__fleche {
+        color: black;
+        font-size: 21px;
+        margin-left: -10px;
     }
 }
 
 
+/*Sur la page principal*/
 
-.lieu {
+.location {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(128, 128, 128, 0.211);
     padding: 0px;
-    i {
-        padding-right: 20px;
-    }
-    p {
+
+    &__texte {
         font-weight: 600;
     }
 }
@@ -50,149 +137,189 @@ header {
     align-items: center;
     padding: 40px 20px 70px 20px;
     background-color: rgba(128, 128, 128, 0.055);
-    h2, p {
+    &__texte {
         text-align: center;
         margin: 5px auto;
+        &--titre {
+        margin: 0 20px;
+        }
     }
-    button {
-        color: white;
-        background-color: #9256dcce;
+    
+    &__button {
+        color: $blanc;
+        background-color: $couleurprimaire;
         margin-top: 20px;
         padding: 18px 20px;
         border-radius: 30px;
+        box-shadow: 0px 6px 10px 2px rgba(28, 28, 28, 0.229);
+
     }
 }
 
-/* Navigation du premier site */
-nav {
-    display: flex;
-    padding: 10px;
-    flex-direction: column;
-    h2 {
+/* Navigation de la page principal */
+.fonctionnement {
+    color: black;
+    &__titre {
         padding-left: 15px;
     }
-    ol {
+
+    &__liste {
         padding: 5px 30px;
         padding-left: 18px;
-        li {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            border-radius: 20px;                
-            box-shadow: 0px 3px 15px 5px rgba(177, 165, 165, 0.256);
-            width: 90%;
-            max-width: 500px;
-            margin: 25px 0px;
-            background-color: rgba(128, 128, 128, 0.055);
-            padding-left: 15px;
-            strong {
-                display: flex;
-                justify-content: center;
-                color: white;
-                background-color: blue;
-                padding: 5px 5px;
-                border-radius: 50%;
-                font-size: 12px;
-                height: 14px;
-                width: 14px;
-                margin-left: -25px;
+    }
 
-            }
-            div {
-                display: flex;
-                align-items: center;
-                padding: 20px;
-                i {
-                    padding-right: 20px;
-                    padding-left: 0px;
-                }
-                p {
-                    margin: 0;
-                }
-            }
-        }
+    &__element {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 20px;                
+        box-shadow: 0px 3px 15px 5px rgba(177, 165, 165, 0.256);
+        width: 90%;
+        max-width: 500px;
+        margin: 25px 0px;
+        background-color: rgba(128, 128, 128, 0.055);
+        padding-left: 15px;
+    }
+
+    &__chiffre {
+        display: flex;
+        justify-content: center;
+        color: white;
+        background-color: blue;
+        padding: 5px 5px;
+        border-radius: 50%;
+        font-size: 12px;
+        height: 14px;
+        width: 14px;
+        margin-left: -25px;
+    }
+
+    &__texte {
+        display: flex;
+        align-items: center;
+        padding: 5px 20px;
     }
 }
+
 /* Main du premier site */
-.pageacc {
+.restaunav {
     display: flex;
     flex-direction: column;
     background-color: rgba(211, 211, 211, 0.671);
     width: 100%;
-    h2 {
+
+    &__titre {
         padding-top: 20px;
         padding-left: 20px;
     }
-    strong {
-        padding-top: 5px;
+ 
     }
-    strong, p {
-        color: black;
-        margin: 5px;
+.restaucard {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 10px 15px;
+    width: 92%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    display: inline-block;
+    text-decoration: none;
+        
+    &__image {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
     }
-    .Restau {
+
+    &__paragraphe {
+        display: flex;   
+    }    
+  
+    &__texte {
         display: flex;
         flex-direction: column;
         background-color: white;
-        margin: 10px 15px;
-        width: 92%;
-        height: 300px;
-        overflow: hidden;
-        border-radius: 15px;
-        display: inline-block;
-        text-decoration: none;
+        width: 100%;
+        padding: 0px 10px;
+        color: black;     
         
-        img {
-            width: 100%;
-            height: 70%;
-            object-fit: cover;
+        &--gras {
+            padding-top: 5px;
+            margin: 5px;
         }
 
-        .paragraphe {
-            display: flex;
-        
-            .text {
-                display: flex;
-                flex-direction: column;
-                background-color: white;
-                width: 100%;
-                z-index: 1;
-                padding: 0px 10px;
-            }
-            i {
-                padding: 20px 30px 5px 5px;
-                color: black;
-                font-size: 23px;
-                font-weight: 100;
-            }
+        &--normal {
+            margin: 5px;
         }
     }
-    .pad {
-        margin-bottom: 50px;
+        
+    &__coeurvide {
+        display: inline-block;
+        display: flex;
+        padding: 20px 30px 5px 5px;
+        color: black;
+        font-size: 23px;
+        font-weight: 100;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        opacity: 1;
+        transition: transform 350ms ease-in-out;
+        i {
+            transition: color 250ms;
+        }
+        &:hover {
+            transform: scale(1.15);
+            color: blue;
+            & .restaucard__coeurplein {
+                opacity: 1;
+            }
+        } 
     }
+
+    &__coeurplein {
+        position: absolute;
+        display: inline-block;
+        color: blue;
+        font-size: 23px;
+        font-weight: 100;
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+    }
+
 }
-footer {
+   
+.piedpage {
     color: white;
     background-color: rgb(60, 55, 55);
-    padding: 20px 0 2px 30px;
+    padding: 20px 0 2px 20px;
     margin: 0;
     padding-bottom: 20px;
-    img {
-        filter: invert(100%);
-        width: 30%;
-        max-width: 200px;
-        padding-bottom: 20px;
+
+    &__titre {
+        font-family: $Policestitre;
+        font-size: 20px;
     }
-    p {
-        margin: 8px 0;
+
+    &__nav {
+        p {
+            margin: 7px 0;
+        }
     }
-    .Proposer, .Devenir {
+    &__symbtxt {
         display: flex;
         align-items: center;
-        height: auto;
-        i {
+
+        &--symbole {
             padding-right: 10px ;
-            font-size: 13px;
+            font-size: 12px;
+        }
+
+        p {
+            margin: 5px 0;
         }
     }
 }
@@ -211,7 +338,6 @@ header {
 }
 
 .pagemenu {
-    background-color: whitesmoke;
     border-radius: 25px;
     .nomresto {
         display: flex;
@@ -219,6 +345,9 @@ header {
         justify-content: space-between;
         margin: 0 30px;
         border-radius: 25px;
+        h2 {
+            font-family: $Policestitre
+        }
     }
 }
 article {
@@ -252,6 +381,10 @@ article {
             margin: 15px;
         }
 }
+.entrées, .plats, .desserts {
+    align-items: center;
+    justify-content: center;
+}
 .plat {
     display: flex;
     align-items: center;
@@ -262,15 +395,23 @@ article {
     margin: 25px 0px;
     background-color: rgba(128, 128, 128, 0.055);
     padding-left: 15px;
+        font-size: 15px;    
+    }
     .platL {
         display: flex;
         flex-direction: column;
         margin: 5px 0;
+        width: 80%;
         strong, p {
-            margin: 3px 0;
+            margin: 3px 0;  
+            overflow: hidden;            
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
         p{
             font-size: 15px;
         }
     }
-}
+    .prix {
+        margin: 15px 15px 0 0;
+    }
