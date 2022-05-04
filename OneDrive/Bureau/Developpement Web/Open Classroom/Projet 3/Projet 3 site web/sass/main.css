@@ -3,20 +3,17 @@
 /*Règles répétables*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 10px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .symbole {
   padding-right: 20px;
 }
 
+/*----------- 
+Media Queries 
+-----------*/
+/* Desktop */
 /*Loader*/
 .loaderconfig {
   display: -webkit-box;
@@ -24,6 +21,7 @@
   display: flex;
   position: fixed;
   background-color: #fffffff4;
+  z-index: 100;
   height: 100%;
   width: 100%;
   -webkit-box-align: center;
@@ -127,32 +125,47 @@
 }
 
 .titre {
-  -webkit-box-shadow: 0px 10px 10px 14x rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 10px 10px 14x rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 3px 20px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 3px 20px 2px rgba(0, 0, 0, 0.15);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 15px 0px;
   /*Sur les pages des menus*/
 }
 
 .titre__texte {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-family: "Shrikhand", cursive;
-  width: 200px;
-  margin: 0 50px;
+  width: 100%;
+  height: auto;
+  font-size: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
   padding: 0;
 }
 
 .titre__fleche {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: black;
   font-size: 21px;
-  margin-left: -10px;
+  padding-left: 20px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 /*Sur la page principal*/
@@ -206,6 +219,29 @@
   border-radius: 30px;
   -webkit-box-shadow: 0px 6px 10px 2px rgba(28, 28, 28, 0.229);
           box-shadow: 0px 6px 10px 2px rgba(28, 28, 28, 0.229);
+  z-index: 0;
+  position: relative;
+}
+
+.reserve__button:hover::after {
+  opacity: 1;
+}
+
+.reserve__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #a16be0;
+  -webkit-box-shadow: 0px 6px 10px 2px rgba(28, 28, 28, 0.229);
+          box-shadow: 0px 6px 10px 2px rgba(28, 28, 28, 0.229);
+  border-radius: 30px;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
 }
 
 /* Navigation de la page principal */
@@ -214,12 +250,49 @@
 }
 
 .fonctionnement__titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-left: 15px;
 }
 
+@media (min-width: 750px) {
+  .fonctionnement__titre {
+    padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .fonctionnement__liste {
-  padding: 5px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 95%;
+  padding: 5px 0px;
   padding-left: 18px;
+}
+
+@media (min-width: 750px) {
+  .fonctionnement__liste {
+    width: 100%;
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .fonctionnement__element {
@@ -236,10 +309,17 @@
   -webkit-box-shadow: 0px 3px 15px 5px rgba(177, 165, 165, 0.256);
           box-shadow: 0px 3px 15px 5px rgba(177, 165, 165, 0.256);
   width: 90%;
-  max-width: 500px;
+  max-width: 350px;
   margin: 25px 0px;
   background-color: rgba(128, 128, 128, 0.055);
   padding-left: 15px;
+}
+
+@media (min-width: 750px) {
+  .fonctionnement__element {
+    margin: 20px 20px;
+    width: 30%;
+  }
 }
 
 .fonctionnement__chiffre {
@@ -271,20 +351,48 @@
 
 /* Main du premier site */
 .restaunav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background-color: rgba(211, 211, 211, 0.671);
   width: 100%;
 }
 
+.restaunav__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 737px) {
+  .restaunav__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px 0;
+  }
+}
+
 .restaunav__titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 20px;
   padding-left: 20px;
+}
+
+@media (min-width: 737px) {
+  .restaunav__titre {
+    padding-left: 15%;
+    padding-top: 40px;
+  }
 }
 
 .restaucard {
@@ -298,11 +406,19 @@
   background-color: white;
   margin: 10px 15px;
   width: 92%;
+  min-width: 30%;
   height: 300px;
   overflow: hidden;
   border-radius: 15px;
   display: inline-block;
   text-decoration: none;
+}
+
+@media (min-width: 737px) {
+  .restaucard {
+    width: 35%;
+    height: 320px;
+  }
 }
 
 .restaucard__image {
@@ -360,11 +476,6 @@
   transition: transform 350ms ease-in-out, -webkit-transform 350ms ease-in-out;
 }
 
-.restaucard__coeurvide i {
-  -webkit-transition: color 250ms;
-  transition: color 250ms;
-}
-
 .restaucard__coeurvide:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
@@ -396,13 +507,45 @@
   padding-bottom: 20px;
 }
 
+@media (min-width: 737px) {
+  .piedpage {
+    padding-left: 50px;
+  }
+}
+
 .piedpage__titre {
   font-family: "Shrikhand", cursive;
   font-size: 20px;
 }
 
+.piedpage__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 737px) {
+  .piedpage__nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .piedpage__nav p {
   margin: 7px 0;
+}
+
+@media (min-width: 737px) {
+  .piedpage__nav p {
+    padding: 0 50px 0 0;
+  }
 }
 
 .piedpage__symbtxt {
@@ -455,6 +598,7 @@ header .imageresto img {
 
 .pagemenu .nomresto h2 {
   font-family: "Shrikhand", cursive;
+  margin-top: 35px;
 }
 
 article {
